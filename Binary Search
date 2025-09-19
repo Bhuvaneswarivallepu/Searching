@@ -1,0 +1,17 @@
+#Binary search
+def binary_search(arr,target):
+    lb=0
+    ub=len(arr)-1
+    while lb<=ub:
+        mid=lb+(ub-lb)//2
+        if(arr[mid]==target):
+            print("Element found in index",mid)
+            return mid
+        elif(arr[mid]<target):
+            lb=mid+1
+        else:
+            ub=mid-1 
+    print("Not found in element")
+arr=[10,20,30,40,50]
+target=int(input("Enter your target value:"))
+binary_search(arr,target)
